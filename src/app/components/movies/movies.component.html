@@ -5,14 +5,11 @@
 
 <h2>Movies</h2>
 
-<!-- only diplays if a movie is selected -->
-<div *ngIf='selectedMovie'>
-    <h2>{{selectedMovie.title}}</h2>
-</div>
-
 <ul>
     <li *ngFor='let movie of movies' (click)='handleClick(movie)'>
         <span>{{movie.id}}</span>
         {{movie.title}}
     </li>
 </ul>
+<!--[] one way data binding -->
+<app-movie-info [movie] = 'selectedMovie'></app-movie-info>

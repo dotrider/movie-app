@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MOVIES } from 'src/app/movies-api';
 import { Movie } from '../../movies';
+import { MoviesService } from './../../movies.service';
 
 @Component({
   selector: 'app-movies',
@@ -10,13 +11,23 @@ import { Movie } from '../../movies';
 export class MoviesComponent implements OnInit {
 
   //Movie array from api
-  movies = MOVIES;
+  movies: Movie[];
   selectedMovie: Movie;
 
-  constructor() { }
 
+  constructor(private moviesService: MoviesService) { }
+
+  //same as componentDidMount
   ngOnInit(): void {
+    this.getMovies();
   }
+
+  getMovies(){
+    //getting movies from service asynchronously by using Observable and subscribing to it.
+    this.moviesService.getMovies().subscribe(movies => this.movies = movies)
+  }
+
+
 
   //click event to select movie
   handleClick(movie: Movie){
