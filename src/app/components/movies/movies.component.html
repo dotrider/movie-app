@@ -1,1 +1,18 @@
-<p>movies works!</p>
+<!--[(ngModel)] allows two way data binding from input to property.x-->
+<!-- *ngFor is Angular's repeater directive. It repeats the host element for each element in a list./ similar to map HOF-->
+<!-- *ngIf /if not null display details else ignore from DOM-->
+
+
+<h2>Movies</h2>
+
+<!-- only diplays if a movie is selected -->
+<div *ngIf='selectedMovie'>
+    <h2>{{selectedMovie.title}}</h2>
+</div>
+
+<ul>
+    <li *ngFor='let movie of movies' (click)='handleClick(movie)'>
+        <span>{{movie.id}}</span>
+        {{movie.title}}
+    </li>
+</ul>

@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SearchComponent } from './components/search/search.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import {  DashboardComponent } from './components/Dashboard/dashboard.component';
 
 //Material imports
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -15,9 +18,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { SearchComponent } from './components/search/search.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { DisplayComponent } from './components/display/display.component';
+
+//Form Module
+import { FormsModule } from '@angular/forms';
+import { MovieInfoComponent } from './components/movie-info/movie-info.component';
+
+
 
 
 @NgModule({
@@ -27,7 +33,8 @@ import { DisplayComponent } from './components/display/display.component';
     HeaderComponent,
     SearchComponent,
     MoviesComponent,
-    DisplayComponent
+    DashboardComponent,
+    MovieInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,8 @@ import { DisplayComponent } from './components/display/display.component';
     MatButtonModule,
     MatCardModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
     
   ],
   providers: [],
