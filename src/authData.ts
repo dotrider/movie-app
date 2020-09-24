@@ -2,12 +2,20 @@
 
 export class LogInData {
 
-    private login: string;
+    private username: string;
     private password: string;
 
-    constructor(login: string, password: string){
+    constructor(username: string, password: string){
         
-        this.login = login;
+        this.username = username;
         this.password = password;
+    }
+
+    getUsername():string {
+        return this.username
+    }
+
+    getPassword():string {
+        return this.password
     }
 }
