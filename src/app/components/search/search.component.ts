@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../../movies';
+import { MoviesService } from './../../movies.service';
+import { Observable, Subject } from 'rxjs';
+import { distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+    movies$: Observable<Movie[]>;
+
+    
+
+  constructor(
+    private moviesService: MoviesService
+  ) { }
 
   ngOnInit(): void {
+
   }
+
+  //Working on search feature
+  searchByTitle(query: string): void {
+    console.log('searchComp', query)
+      this.movies$ = this.moviesService.searchByTitle(query)
+   
+  }
+
+
 
 }

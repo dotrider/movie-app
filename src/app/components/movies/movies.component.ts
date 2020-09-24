@@ -30,6 +30,7 @@ export class MoviesComponent implements OnInit {
   //same as componentDidMount
   ngOnInit(): void {
     this.getMovies();
+    console.log('ngM', this.movies)
   }
 
   getMovies(){

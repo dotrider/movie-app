@@ -1,1 +1,8 @@
-<p>search works!</p>
+
+<div fxLayoutAlign='center'>
+	<mat-search-bar #searchQuery (onEnter)='searchByTitle(searchQuery.value)'>
+        <!-- <input #searchByTitle (onEnter)='getMovieByTitle(searchByTitle.value)'/> -->
+    </mat-search-bar>
+
+</div>
+

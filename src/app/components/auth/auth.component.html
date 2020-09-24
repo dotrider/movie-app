@@ -3,15 +3,18 @@
         <mat-toolbar color="primary">
             Login Page
           </mat-toolbar>
-        <form fxLayoutAlign='strech' fxLayout='column' fxLayoutGap="1.5em" class='form'>
+        <form 
+          fxLayoutAlign='strech' fxLayout='column' fxLayoutGap="1.5em" class='form'
+          (ngSubmit)="onLogIn(userData)" 
+        >
             <mat-form-field class="example-full-width">
               <mat-label>Useraname</mat-label>
-              <input matInput placeholder="Username" >
+              <input matInput placeholder="Username" required autofocus ngModel name="login">
             </mat-form-field>
           
             <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
-                <input matInput type='password' placeholder="Password" >
+                <input matInput type='password' placeholder="Password" required autofocus ngModel name="password">
               </mat-form-field>
               <button mat-raised-button	 mat-button type='submit'>Login</button>
           </form>

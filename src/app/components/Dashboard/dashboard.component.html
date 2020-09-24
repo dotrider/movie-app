@@ -1,4 +1,7 @@
 
+<app-search></app-search>
+
+
 <div class="dash">
   <mat-grid-list cols="3" rowHeight="2:2">
     <a *ngFor="let movie of movies"
@@ -14,3 +17,11 @@
     </a>
   </mat-grid-list>
 </div>
+
+      <ul>
+        <li *ngFor="let movie of movies$ | async" >
+          <a>
+            {{movie.title}}
+          </a>
+        </li>
+      </ul> 

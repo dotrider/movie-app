@@ -9,6 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 //Error handling
 import { catchError, map, tap } from 'rxjs/operators';
 import { HasErrorState } from '@angular/material/core/common-behaviors/error-state';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @Injectable({
   providedIn: 'root'
@@ -58,6 +59,16 @@ export class MoviesService {
     )
   }
 
+  //Working on Search Feature
+  searchByTitle(query: string): Observable<Movie[]>{
+    console.log('searchServ title', query)
+    if(!query) return of([])
+    return this.http.get<Movie[]>(`${this.moviesUrl}/?title=${query}`).pipe(
+      map((response: any) => {   
+       return response})
+      // catchError(this.handleError<Movie[]>('getMovieByTitle'))
+    )
+  }
 
   //Error Handling *****ANGULAR DOCUMENTATION*******
   private handleError<T>(operation = 'operation', result?: T) {

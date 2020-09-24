@@ -27,6 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+//Search Bar
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+
 //Form Module
 import { FormsModule } from '@angular/forms';
 
@@ -56,6 +59,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatGridListModule,
     HttpClientModule,
+    NgMatSearchBarModule,
 
     //Helps mimic real server request
     HttpClientInMemoryWebApiModule.forRoot(

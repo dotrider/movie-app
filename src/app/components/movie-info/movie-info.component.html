@@ -28,7 +28,7 @@ fxLayoutAlign='center center' fxFlexFill
                         <button mat-raised-button mat-button (click)='updateMovie()'>Save</button>
                     </mat-card-actions>
                 </div>
-
+                <!--upon updating will trigger conditional rendering between edit section and read only-->
                 <div fxLayoutGap="2em" fxLayoutAlign='center' *ngIf="!isVisible">
                     <button mat-raised-button mat-button (click)='goBack()'>Back</button>
                     <button mat-raised-button mat-button (click)='handleToggle()'>Update</button>
