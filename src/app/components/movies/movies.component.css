@@ -5,3 +5,8 @@
   .movie-header-image {
     background-size: cover;
   }
+
+  .btn-container {
+    padding: 3em;
+  }
+

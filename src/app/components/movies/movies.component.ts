@@ -17,7 +17,7 @@ export class MoviesComponent implements OnInit {
   //Movie array from api
   movies: Movie[];
   // selectedMovie: Movie;
-
+  isVisible: boolean = false;
 
   constructor(
     private moviesService: MoviesService,
@@ -46,14 +46,14 @@ export class MoviesComponent implements OnInit {
   }
 
   deleteMovie(movie: Movie): void {
-    console.log('delete', movie)
+    // console.log('delete', movie)
     this.movies = this.movies.filter(m => m !== movie);
     this.moviesService.deleteMovie(movie).subscribe()
   }
 
-  goBack(): void {
-    console.log(this.Location,'location')
-    this.Location.back()
+  handleToggle(): void {
+    // console.log('hitt')
+     this.isVisible = !this.isVisible;
   }
 
 

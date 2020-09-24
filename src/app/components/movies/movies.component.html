@@ -7,8 +7,16 @@
 
 
   <h2 fxLayoutAlign='center'>Movies</h2>
+  <!--using *ngIf to conditional render form and movie list-->
+  <div fxLayoutAlign='center' class='btn-container' *ngIf="!isVisible">
+    <button mat-raised-button mat-button 
+      (click)='handleToggle()'
+    >
+    Add Movie
+    </button>
+  </div>
 
-    <div fxLayoutAlign='center' >
+    <div fxLayoutAlign='center' *ngIf="isVisible">
       <mat-card fxFlex='18em'>
             <mat-form-field >
                 <input matInput #imgURL placeholder='Image URL'/>
@@ -24,43 +32,52 @@
                 <textarea matInput #movieComment placeholder='Comment'></textarea>
             </mat-form-field>
   
-    
+            <mat-card-actions fxLayoutGap="2em" fxLayoutAlign='center' >
                 <button 
                   mat-raised-button mat-button 
                   (click)='addMovie(imgURL.value); imgURL.value=""'
                   >
                   Add
                 </button>
+                <button 
+                  mat-raised-button mat-button 
+                  (click)='handleToggle()'
+                  >
+                  Cancel
+                </button>
+              </mat-card-actions>
         </mat-card> 
     </div>   
+    
   
-  
-  <ul>
-      <li *ngFor='let movie of movies'
-      fxLayoutAlign='center center' 
-      >
-          
-              <mat-card class='movie-card' >
-                  <mat-card-header>
-                    <mat-card-title>{{movie.title}}</mat-card-title>
-                  </mat-card-header>
-                  <img mat-card-image src={{movie.img}} alt={{movie.title}}>
-                  <mat-card-content>
-                    <p>
-                     Description: {{movie.description}}
-                    </p>
-                    <p>
-                      Comments: {{movie.comments}}
-                     </p>
-                  </mat-card-content>
-                  <mat-card-subtitle>{{movie.id}}</mat-card-subtitle>
-                  <mat-card-actions fxLayoutGap="2em" fxLayoutAlign='center' >
-                    <button mat-raised-button mat-button (click)='deleteMovie(movie)'>Delete</button>
-                    <a routerLink='/info/{{ movie.id }}'><button mat-raised-button mat-button>Info</button> </a>
-                  </mat-card-actions>
-                </mat-card>
-         
-      </li>
-  </ul>
+  <div *ngIf="!isVisible">
+    <ul>
+        <li *ngFor='let movie of movies'
+        fxLayoutAlign='center center' 
+        >
+            
+                <mat-card class='movie-card' >
+                    <mat-card-header>
+                      <mat-card-title>{{movie.title}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src={{movie.img}} alt={{movie.title}}>
+                    <mat-card-content>
+                      <p>
+                       Description: {{movie.description}}
+                      </p>
+                      <p>
+                        Comments: {{movie.comments}}
+                       </p>
+                    </mat-card-content>
+                    <mat-card-subtitle>{{movie.id}}</mat-card-subtitle>
+                    <mat-card-actions fxLayoutGap="2em" fxLayoutAlign='center' >
+                      <button mat-raised-button mat-button (click)='deleteMovie(movie)'>Delete</button>
+                      <a routerLink='/info/{{ movie.id }}'><button mat-raised-button mat-button>Edit</button> </a>
+                    </mat-card-actions>
+                  </mat-card>
+           
+        </li>
+    </ul>
+  </div>
 
 
