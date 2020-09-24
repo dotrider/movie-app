@@ -31,9 +31,15 @@ export class MoviesService {
       )
   }
 
-  // updateMovie(movie: Movie): Observable<any> {
+  //The HttpClient.put() method takes three parameters:
+  // URL, Item being updated, http options
+  updateMovie(movie: Movie): Observable<any> {
+    return this.http.put(this.moviesUrl, movie, this.httpOptions).pipe(
+      catchError(this.handleError<any>('updateMovie'))
+    )
+  }
+
   
-  // }
 
 
   //Error Handling *****ANGULAR DOCUMENTATION*******
@@ -47,4 +53,10 @@ export class MoviesService {
       return of(result as T);
     };
   }
+
+
+  //Http save request
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 }

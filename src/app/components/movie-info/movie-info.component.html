@@ -22,6 +22,12 @@ fxLayoutAlign='center center' fxFlexFill
                 <mat-form-field class="example-full-width">
                     <input matInput [(ngModel)]='movie.comments' placeholder='Comment'/>
                 </mat-form-field>
+
+                <div fxLayoutGap="2em" fxLayoutAlign='center'>
+                    <button mat-raised-button mat-button (click)='goBack()'>Back</button>
+                    <button mat-raised-button mat-button (click)='updateMovie()'>Update</button>
+                </div>
             </mat-card>    
     </div> 
 
+d

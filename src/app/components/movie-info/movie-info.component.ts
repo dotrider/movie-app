@@ -39,10 +39,10 @@ export class MovieInfoComponent implements OnInit {
     this.Location.back()
   }
 
-  // update(): void {
-  //   this.moviesService.updateMovie(this.movie)
-  //     .subscribe(() => this.goBack());
-  // }
+  updateMovie(): void {
+    this.moviesService.updateMovie(this.movie)
+      .subscribe(() => this.goBack());
+  }
 
 
 }
