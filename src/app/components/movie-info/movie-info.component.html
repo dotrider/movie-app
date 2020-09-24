@@ -12,15 +12,15 @@ fxLayoutAlign='center center' fxFlexFill
           
                     <p>Description: {{movie.description}}</p>
                     <p>Comments: {{movie.comments}}</p>
-                <mat-form-field class="example-full-width">
+                <mat-form-field >
                     <input matInput [(ngModel)]='movie.title' placeholder='Title'/>
                 </mat-form-field>  
-                <mat-form-field class="example-full-width">
+                <mat-form-field >
                     <input matInput [(ngModel)]='movie.description' placeholder='Description'/>
                 </mat-form-field> 
         
-                <mat-form-field class="example-full-width">
-                    <input matInput [(ngModel)]='movie.comments' placeholder='Comment'/>
+                <mat-form-field >
+                    <textarea matInput [(ngModel)]='movie.comments' placeholder='Comment'></textarea>
                 </mat-form-field>
 
                 <div fxLayoutGap="2em" fxLayoutAlign='center'>

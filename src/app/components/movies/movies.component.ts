@@ -2,12 +2,16 @@ import { Component, OnInit } from '@angular/core';
 // import { MOVIES } from 'src/app/movies-api';
 import { Movie } from '../../movies';
 import { MoviesService } from './../../movies.service';
+import { Location } from '@angular/common';
+//holds info about the route
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css']
 })
+
 export class MoviesComponent implements OnInit {
 
   //Movie array from api
@@ -15,7 +19,13 @@ export class MoviesComponent implements OnInit {
   // selectedMovie: Movie;
 
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(
+    private moviesService: MoviesService,
+    private route: ActivatedRoute, 
+    private Location: Location
+    ) { }
+
+
 
   //same as componentDidMount
   ngOnInit(): void {
@@ -27,6 +37,24 @@ export class MoviesComponent implements OnInit {
     this.moviesService.getMovies().subscribe(movies => this.movies = movies)
   }
 
+
+  addMovie(img: string): void {
+    if(!img){return;}
+    this.moviesService.addMovie({img} as Movie).subscribe(movie => {
+      this.movies.push(movie)
+    })
+  }
+
+  deleteMovie(movie: Movie): void {
+    console.log('delete', movie)
+    this.movies = this.movies.filter(m => m !== movie);
+    this.moviesService.deleteMovie(movie).subscribe()
+  }
+
+  goBack(): void {
+    console.log(this.Location,'location')
+    this.Location.back()
+  }
 
 
   //click event to select movie

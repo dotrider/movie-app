@@ -5,31 +5,62 @@
 <!-- <app-movie-info [movie] = 'selectedMovie'></app-movie-info> -->
 
 
-<h2 fxLayoutAlign='center'>Movies</h2>
 
-<ul>
-    <li *ngFor='let movie of movies'
-    fxLayoutAlign='center center' 
-    >
-        <a routerLink='/info/{{ movie.id }}'>
-            <mat-card class='movie-card' >
-                <mat-card-header>
-                  <mat-card-title>{{movie.title}}</mat-card-title>
-                </mat-card-header>
-                <img mat-card-image src={{movie.img}} alt={{movie.title}}>
-                <mat-card-content>
-                  <p>
-                   Description: {{movie.description}}
-                  </p>
-                  <p>
-                    Comments: {{movie.comments}}
-                   </p>
-                </mat-card-content>
-                <mat-card-subtitle>{{movie.id}}</mat-card-subtitle>
-                <mat-card-actions>
-                  <button mat-button></button>
-                </mat-card-actions>
-              </mat-card>
-        </a>
-    </li>
-</ul>
+  <h2 fxLayoutAlign='center'>Movies</h2>
+
+    <div fxLayoutAlign='center' >
+      <mat-card fxFlex='18em'>
+            <mat-form-field >
+                <input matInput #imgURL placeholder='Image URL'/>
+            </mat-form-field>  
+            <mat-form-field >
+                <input matInput #movieTitle placeholder='Title'/>
+            </mat-form-field>  
+            <mat-form-field >
+                <input matInput #movieDescription placeholder='Description'/>
+            </mat-form-field> 
+    
+            <mat-form-field >
+                <textarea matInput #movieComment placeholder='Comment'></textarea>
+            </mat-form-field>
+  
+    
+                <button 
+                  mat-raised-button mat-button 
+                  (click)='addMovie(imgURL.value); imgURL.value=""'
+                  >
+                  Add
+                </button>
+        </mat-card> 
+    </div>   
+  
+  
+  <ul>
+      <li *ngFor='let movie of movies'
+      fxLayoutAlign='center center' 
+      >
+          <a routerLink='/info/{{ movie.id }}'>
+              <mat-card class='movie-card' >
+                  <mat-card-header>
+                    <mat-card-title>{{movie.title}}</mat-card-title>
+                  </mat-card-header>
+                  <img mat-card-image src={{movie.img}} alt={{movie.title}}>
+                  <mat-card-content>
+                    <p>
+                     Description: {{movie.description}}
+                    </p>
+                    <p>
+                      Comments: {{movie.comments}}
+                     </p>
+                  </mat-card-content>
+                  <mat-card-subtitle>{{movie.id}}</mat-card-subtitle>
+                  <mat-card-actions>
+                    <button mat-button></button>
+                  </mat-card-actions>
+                </mat-card>
+          </a>
+          <button mat-raised-button mat-button (click)='deleteMovie(movie)'>Delete</button>
+      </li>
+  </ul>
+
+

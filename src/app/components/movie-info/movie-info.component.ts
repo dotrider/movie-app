@@ -35,7 +35,7 @@ export class MovieInfoComponent implements OnInit {
   }
 
   goBack(): void {
-    console.log(this.Location,'location')
+    // console.log(this.Location,'location')
     this.Location.back()
   }
 
