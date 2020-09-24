@@ -5,7 +5,7 @@
 <!-- <app-movie-info [movie] = 'selectedMovie'></app-movie-info> -->
 
 
-<h2>Movies</h2>
+<h2 fxLayoutAlign='center'>Movies</h2>
 
 <ul>
     <li *ngFor='let movie of movies'
@@ -19,8 +19,11 @@
                 <img mat-card-image src={{movie.img}} alt={{movie.title}}>
                 <mat-card-content>
                   <p>
-                    {{movie.description}}
+                   Description: {{movie.description}}
                   </p>
+                  <p>
+                    Comments: {{movie.comments}}
+                   </p>
                 </mat-card-content>
                 <mat-card-subtitle>{{movie.id}}</mat-card-subtitle>
                 <mat-card-actions>

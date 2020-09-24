@@ -1,26 +1,27 @@
 
+<h2 fxLayoutAlign='center'>Movies List</h2>
+
+
 <div *ngIf='movie'
 fxLayoutAlign='center center' fxFlexFill
 >
 <mat-card fxFlex='18em'>
-        <h2>Title: {{movie.title}}</h2>
-        <p>Description: {{movie.description}}</p>
-        <p>Comments: {{movie.comments}}</p>
-        <mat-form-field class="example-full-width">
-        <input matInput [(ngModel)]='movie.title' placeholder='Title'/>
-        </mat-form-field>  
-        <mat-form-field class="example-full-width">
-            <input matInput [(ngModel)]='movie.description' placeholder='Description'/>
-        </mat-form-field> 
-    
-        <mat-form-field class="example-full-width">
-            <input matInput [(ngModel)]='movie.comments' placeholder='Comment'/>
-        </mat-form-field>
+            <h2>Title: {{movie.title}}</h2>
+              
+                    <img mat-card-image src={{movie.img}} alt={{movie.title}}>
+          
+                    <p>Description: {{movie.description}}</p>
+                    <p>Comments: {{movie.comments}}</p>
+                <mat-form-field class="example-full-width">
+                    <input matInput [(ngModel)]='movie.title' placeholder='Title'/>
+                </mat-form-field>  
+                <mat-form-field class="example-full-width">
+                    <input matInput [(ngModel)]='movie.description' placeholder='Description'/>
+                </mat-form-field> 
         
+                <mat-form-field class="example-full-width">
+                    <input matInput [(ngModel)]='movie.comments' placeholder='Comment'/>
+                </mat-form-field>
+            </mat-card>    
+    </div> 
 
-
-        <button mat-raised-button mat-button (click)='goBack()'>Back</button>
-    </mat-card>
-</div> 
-
-<!-- only diplays if a movie is selected -->

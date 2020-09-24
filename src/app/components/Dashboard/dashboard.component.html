@@ -1,14 +1,16 @@
 
-<mat-grid-list cols="3" rowHeight="2:2">
-  <a *ngFor="let movie of movies" 
-    routerLink="/info/{{ movie.id }}">
-      <mat-grid-tile>
-        <mat-card class='movie-card' >
-          <mat-card-header>
-            <mat-card-title>{{movie.title}}</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image src={{movie.img}} alt={{movie.title}}>
-        </mat-card>
-      </mat-grid-tile>
-  </a>
-</mat-grid-list>
+<div>
+  <mat-grid-list cols="3" rowHeight="2:2">
+    <a *ngFor="let movie of movies"
+      routerLink="/info/{{ movie.id }}">
+        <mat-grid-tile >
+          <mat-card class='movie-card' >
+            <mat-card-header>
+              <mat-card-title>{{movie.title}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src={{movie.img}} alt={{movie.title}}>
+          </mat-card>
+        </mat-grid-tile>
+    </a>
+  </mat-grid-list>
+</div>

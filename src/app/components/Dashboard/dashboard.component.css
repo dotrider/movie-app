@@ -1,13 +1,6 @@
-.col-1-4 {
-    width: 25%;
-  }
-
-  .grid-pad {
-    padding: 10px 0;
-  }
 
   .movie-card {
-    max-width: 250px;
+    max-width: 200px;
   }
   
   .movie-header-image {

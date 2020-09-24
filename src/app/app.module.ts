@@ -2,6 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
+//server request
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
 //Components imports
 import { AppComponent } from './app.component';
 import { AuthComponent } from './components/auth/auth.component';
@@ -9,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { DashboardComponent } from './components/Dashboard/dashboard.component';
+import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 
 //Material imports
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -22,7 +29,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 //Form Module
 import { FormsModule } from '@angular/forms';
-import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 
 
 
@@ -48,8 +54,13 @@ import { MovieInfoComponent } from './components/movie-info/movie-info.component
     BrowserAnimationsModule,
     MatToolbarModule,
     FormsModule,
-    MatGridListModule
-    
+    MatGridListModule,
+    HttpClientModule,
+
+    //Helps mimic real server request
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
