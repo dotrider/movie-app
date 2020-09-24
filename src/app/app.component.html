@@ -1,10 +1,16 @@
 
-<div class='container'>
+<!-- <div class='container'> -->
   <app-header></app-header>
-  <app-auth></app-auth>
-</div>
-
-
-<div>
+  <!-- <app-auth></app-auth> -->
+  <nav fxLayoutAlign='center center' >
+    <button mat-raised-button mat-button>
+      <a routerLink='/dashboard'>Dashboard</a>
+    </button>
+    <button mat-raised-button mat-button>
+      <a routerLink='/movies'>Movies</a>
+    </button>
+  </nav>
+  
   <router-outlet></router-outlet>
-</div>
+<!-- </div> -->
+

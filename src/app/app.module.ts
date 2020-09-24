@@ -8,7 +8,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MoviesComponent } from './components/movies/movies.component';
-import {  DashboardComponent } from './components/Dashboard/dashboard.component';
+import { DashboardComponent } from './components/Dashboard/dashboard.component';
 
 //Material imports
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 //Form Module
 import { FormsModule } from '@angular/forms';
@@ -46,7 +47,8 @@ import { MovieInfoComponent } from './components/movie-info/movie-info.component
     MatCardModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule
     
   ],
   providers: [],

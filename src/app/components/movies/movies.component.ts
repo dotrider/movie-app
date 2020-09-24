@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MOVIES } from 'src/app/movies-api';
+// import { MOVIES } from 'src/app/movies-api';
 import { Movie } from '../../movies';
 import { MoviesService } from './../../movies.service';
 
@@ -12,7 +12,7 @@ export class MoviesComponent implements OnInit {
 
   //Movie array from api
   movies: Movie[];
-  selectedMovie: Movie;
+  // selectedMovie: Movie;
 
 
   constructor(private moviesService: MoviesService) { }
@@ -30,9 +30,9 @@ export class MoviesComponent implements OnInit {
 
 
   //click event to select movie
-  handleClick(movie: Movie){
-    this.selectedMovie = movie
-    console.log(this.selectedMovie, 'handleClick')
-  }
+  // handleClick(movie: Movie){
+  //   this.selectedMovie = movie
+  //   console.log(this.selectedMovie, 'handleClick')
+  // }
 
 }

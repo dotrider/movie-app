@@ -1,0 +1,7 @@
+.movie-card {
+    max-width: 250px;
+  }
+  
+  .movie-header-image {
+    background-size: cover;
+  }

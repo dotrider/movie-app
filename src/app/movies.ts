@@ -7,5 +7,6 @@ export interface Movie {
     averageRating: number;
     myRating: number;
     comments: string;
+    img: string;
   }
   

@@ -8,15 +8,17 @@ export const MOVIES: Movie[] = [
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!',
+        img: 'https://imgc.allpostersimages.com/img/print/u-g-F9KMWE0.jpg?w=550&h=550&p=0' 
       },
       {
         id:3, 
-        title: 'The Dark Knight', 
+        title: 'Iron Man', 
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!',
+        img: 'https://www.joblo.com/assets/images/oldsite/posters/images/full/2008-iron_man-4.jpg'
       },
       {
         id:4, 
@@ -24,7 +26,8 @@ export const MOVIES: Movie[] = [
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!',
+        img: 'https://imgc.allpostersimages.com/img/print/u-g-F9I5HL0.jpg?w=550&h=550&p=0' 
       },
       {
         id:5, 
@@ -32,15 +35,17 @@ export const MOVIES: Movie[] = [
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!' ,
+        img: 'https://imgc.allpostersimages.com/img/print/u-g-F977B00.jpg?w=550&h=550&p=0'
       },
       {
         id:6, 
-        title: 'The Irisman', 
+        title: 'The Irishman', 
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!',
+        img: 'https://imgc.allpostersimages.com/img/print/u-g-F9JL5W0.jpg?w=550&h=550&p=0' 
       },
       {
         id:7, 
@@ -48,7 +53,8 @@ export const MOVIES: Movie[] = [
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!' ,
+        img: 'https://cdn.shopify.com/s/files/1/0057/3728/3618/products/2f7d704531a19b038111332f50108bbc_26e2f23e-b397-4711-b653-2a750e8fe901_480x.progressive.jpg?v=1573595025'
       },
       {
         id:8, 
@@ -56,15 +62,17 @@ export const MOVIES: Movie[] = [
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!',
+        img: 'https://imgc.allpostersimages.com/img/print/u-g-F4JASM0.jpg?w=550&h=550&p=0' 
       },
       {
         id:9, 
-        title: 'The Incredibles', 
+        title: 'The Incredibles 2', 
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!' ,
+        img: 'https://imgc.allpostersimages.com/img/print/u-g-F9DGUP0.jpg?w=550&h=550&p=0'
       },
       {
         id:10, 
@@ -72,7 +80,8 @@ export const MOVIES: Movie[] = [
         description: 'goes here', 
         averageRating: 5, 
         myRating: 5, 
-        comments: 'Best movie Ever!' 
+        comments: 'Best movie Ever!' ,
+        img: 'https://cdn.shopify.com/s/files/1/0057/3728/3618/products/49dd960dd7b6ffa281fa226aa8ff7d27_155da653-f960-4df3-9610-722dbd8339b2_480x.progressive.jpg?v=1573593935'
       },
 
 ];
