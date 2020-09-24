@@ -18,6 +18,7 @@ export class MovieInfoComponent implements OnInit {
   //allow us to pass movie into our html movie-info
   
   movie: Movie;
+  isVisible: boolean = false;
 
   constructor(
     private route: ActivatedRoute, 
@@ -44,5 +45,8 @@ export class MovieInfoComponent implements OnInit {
       .subscribe(() => this.goBack());
   }
 
+  handleToggle(): void{
+    this.isVisible = !this.isVisible;
+  }
 
 }

@@ -51,9 +51,10 @@
     
   
   <div *ngIf="!isVisible">
-    <ul>
+    <ul >
         <li *ngFor='let movie of movies'
         fxLayoutAlign='center center' 
+        id='movie-spacing'
         >
             
                 <mat-card class='movie-card' >

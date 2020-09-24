@@ -12,20 +12,26 @@ fxLayoutAlign='center center' fxFlexFill
           
                     <p>Description: {{movie.description}}</p>
                     <p>Comments: {{movie.comments}}</p>
-                <mat-form-field >
-                    <input matInput [(ngModel)]='movie.title' placeholder='Title'/>
-                </mat-form-field>  
-                <mat-form-field >
-                    <input matInput [(ngModel)]='movie.description' placeholder='Description'/>
-                </mat-form-field> 
-        
-                <mat-form-field >
-                    <textarea matInput [(ngModel)]='movie.comments' placeholder='Comment'></textarea>
-                </mat-form-field>
+                <div *ngIf="isVisible">
+                    <mat-form-field >
+                        <input matInput [(ngModel)]='movie.title' placeholder='Title'/>
+                    </mat-form-field>  
+                    <mat-form-field >
+                        <input matInput [(ngModel)]='movie.description' placeholder='Description'/>
+                    </mat-form-field> 
+            
+                    <mat-form-field >
+                        <textarea matInput [(ngModel)]='movie.comments' placeholder='Comment'></textarea>
+                    </mat-form-field>
+                    <mat-card-actions fxLayoutGap="2em" fxLayoutAlign='center' >
+                        <button mat-raised-button mat-button (click)='handleToggle()'>Cancel</button>
+                        <button mat-raised-button mat-button (click)='updateMovie()'>Save</button>
+                    </mat-card-actions>
+                </div>
 
-                <div fxLayoutGap="2em" fxLayoutAlign='center'>
+                <div fxLayoutGap="2em" fxLayoutAlign='center' *ngIf="!isVisible">
                     <button mat-raised-button mat-button (click)='goBack()'>Back</button>
-                    <button mat-raised-button mat-button (click)='updateMovie()'>Update</button>
+                    <button mat-raised-button mat-button (click)='handleToggle()'>Update</button>
                 </div>
             </mat-card>    
     </div> 
