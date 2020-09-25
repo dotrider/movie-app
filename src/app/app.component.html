@@ -1,16 +1,14 @@
 
-<!-- <div class='container'> -->
+
   <app-header></app-header>
-  <!-- <app-auth></app-auth> -->
-  <nav class='nav' fxLayoutAlign='center center' fxLayoutGap="2em" >
-    <button mat-raised-button mat-button>
-      <a routerLink='/dashboard'>Dashboard</a>
-    </button>
-    <button mat-raised-button mat-button>
-      <a routerLink='/movies'>Admin</a>
-    </button>
-  </nav>
+    <nav class='nav' fxLayoutAlign='center center' fxLayoutGap="2em" *ngIf='authService.isLogIn'>
+        <button mat-raised-button mat-button>
+            <a routerLink='/dashboard'>Dashboard</a>
+        </button>
+        <button mat-raised-button mat-button>
+            <a routerLink='/movies'>Admin</a>
+        </button>
+    </nav>
   
   <router-outlet></router-outlet>
-<!-- </div> -->
 
