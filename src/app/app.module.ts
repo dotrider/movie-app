@@ -26,6 +26,8 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+
 
 //Search Bar
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
@@ -60,6 +62,7 @@ import { FormsModule } from '@angular/forms';
     MatGridListModule,
     HttpClientModule,
     NgMatSearchBarModule,
+    MatIconModule,
 
     //Helps mimic real server request
     HttpClientInMemoryWebApiModule.forRoot(

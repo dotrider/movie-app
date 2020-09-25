@@ -1,27 +1,32 @@
-# MovieApp
+# Movie Night #
+Movie Night app is a front-end single page application built with Angular.
+- First Angular app built for coding excercise
+
+
+## Login Page ##
+For this coding excersice I did not use any libraries for use authentication. It's just basic logic to mimic a user authentication.
+
+Demo Login
+- username: test
+- password: 123
+
+![](movie_login.gif)
+
+- Each Movie title is Clickable
+
+![](single_movie.gif)
+
+## Full C.R.U.D ##
+To simulate communication with a remote data server I used In-Memory Web API which allows me to make RESTful Api's request without spinning up my own server.
+
+- User is able to Post, Read, Update and Delete movies
+
+![](admin_crud.gif)
+
+## Mobile Responsive ##
+For styling I used Angular Material UI as well as Flex-layout for my components.
+
+![](movie_mobile.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

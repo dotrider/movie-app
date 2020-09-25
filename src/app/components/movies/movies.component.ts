@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from '../../movies';
 import { MoviesService } from './../../movies.service';
 import { Location } from '@angular/common';
-//holds info about the route
-import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-movies',
@@ -21,7 +20,6 @@ export class MoviesComponent implements OnInit {
 
   constructor(
     private moviesService: MoviesService,
-    private route: ActivatedRoute, 
     private Location: Location
     ) { }
 
@@ -44,6 +42,7 @@ export class MoviesComponent implements OnInit {
     this.moviesService.addMovie({img} as Movie).subscribe(movie => {
       this.movies.push(movie)
     })
+    this.Location.back()
   }
 
   deleteMovie(movie: Movie): void {
