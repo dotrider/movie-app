@@ -10,23 +10,23 @@ Demo Login
 - username: test
 - password: 123
 
-![](movie_login.gif)
+![](img/movie_login.gif)
 
 - Each Movie title is Clickable
 
-![](single_movie.gif)
+![](img/single_movie.gif)
 
 ## Full C.R.U.D ##
 To simulate communication with a remote data server I used In-Memory Web API which allows me to make RESTful Api's request without spinning up my own server.
 
 - User is able to Post, Read, Update and Delete movies
 
-![](admin_crud.gif)
+![](img/admin_crud.gif)
 
 ## Mobile Responsive ##
 For styling I used Angular Material UI as well as Flex-layout for my components.
 
-![](movie_mobile.gif)
+![](img/movie_mobile.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
