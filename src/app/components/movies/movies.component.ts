@@ -37,18 +37,19 @@ export class MoviesComponent implements OnInit {
   }
 
 
-  addMovie(img: string): void {
-    if(!img){return;}
-    this.moviesService.addMovie({img} as Movie).subscribe(movie => {
-      this.movies.push(movie)
+  addMovie(img: string, title: string, description: string, comments: string): void {
+    if(!img && !title && !description && !comments){return;};
+    let newMovie: object = {img, title, description, comments};
+    this.moviesService.addMovie(newMovie as Movie).subscribe(movie => {
+      this.movies.push(movie);
     })
-    this.Location.back()
+    this.Location.back();
   }
 
   deleteMovie(movie: Movie): void {
     // console.log('delete', movie)
     this.movies = this.movies.filter(m => m !== movie);
-    this.moviesService.deleteMovie(movie).subscribe()
+    this.moviesService.deleteMovie(movie).subscribe();
   }
 
   handleToggle(): void {

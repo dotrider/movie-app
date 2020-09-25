@@ -35,7 +35,7 @@
             <mat-card-actions fxLayoutGap="2em" fxLayoutAlign='center' >
                 <button 
                   mat-raised-button mat-button 
-                  (click)='addMovie(imgURL.value); imgURL.value=""'
+                  (click)='addMovie(imgURL.value, movieTitle.value, movieDescription.value, movieComment.value)'
                   >
                   Add
                 </button>
