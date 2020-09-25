@@ -2,6 +2,7 @@
 Movie Night app is a front-end single page application built with Angular.
 - First Angular app built for coding excercise
 
+<br />
 
 ## Login Page ##
 For this coding excersice I did not use any libraries for use authentication. It's just basic logic to mimic a user authentication.
@@ -13,8 +14,8 @@ Demo Login
 
 ![](img/movie_login.gif)
 
-
-
+<br />
+<br />
 
 
 - Each Movie title is Clickable
@@ -23,8 +24,8 @@ Demo Login
 ![](img/single_movie.gif)
 
 
-
-
+<br />
+<br />
 
 
 ## Full C.R.U.D ##
@@ -37,7 +38,8 @@ To simulate communication with a remote data server I used In-Memory Web API whi
 
 
 
-
+<br />
+<br />
 
 
 
