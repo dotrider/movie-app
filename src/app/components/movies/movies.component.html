@@ -69,6 +69,13 @@
                       <p>
                         Comments: {{movie.comments}}
                        </p>
+                       <ngb-rating 
+                       name="{{movie.averageRating}}" 
+                       [(ngModel)]="movie.averageRating"  
+                       [(rate)]='movie.averageRating' 
+                       [readonly]="true" [max]="5"
+                       >
+                     </ngb-rating>
                     </mat-card-content>
                     <mat-card-subtitle>{{movie.id}}</mat-card-subtitle>
                     <mat-card-actions fxLayoutGap="2em" fxLayoutAlign='center' >

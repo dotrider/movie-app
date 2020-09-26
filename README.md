@@ -12,7 +12,7 @@ Demo Login
 - password: 123
 
 
-![](img/movie_login.gif)
+![](img/login_movie.gif)
 
 <br>
 <br>
@@ -21,7 +21,7 @@ Demo Login
 - Each Movie title is Clickable
 
 
-![](img/single_movie.gif)
+![](img/clickable_movie.gif)
 
 
 <br>
@@ -47,7 +47,7 @@ To simulate communication with a remote data server I used In-Memory Web API whi
 For styling I used Angular Material UI as well as Flex-layout for my components.
 
 
-![](img/movie_mobile.gif)
+![](img/mobile_movie.gif)
 
 
 
