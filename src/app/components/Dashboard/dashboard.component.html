@@ -14,7 +14,7 @@
             <img mat-card-image src={{movie.img}} alt={{movie.title}}>
             <mat-card-subtitle>
               <ngb-rating 
-                name="{{movie.averageRating}}" 
+                name="{{movie.id}}" 
                 [(ngModel)]="movie.averageRating"  
                 [(rate)]=movie.averageRating 
                 [readonly]="true" [max]="5"

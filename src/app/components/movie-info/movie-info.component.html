@@ -12,6 +12,13 @@ fxLayoutAlign='center center' fxFlexFill
           
                     <p>Description: {{movie.description}}</p>
                     <p>Comments: {{movie.comments}}</p>
+                    <ngb-rating 
+                    name="{{movie.myRating}}" 
+                    [(ngModel)]="movie.myRating"  
+                    [(rate)]='movie.myRating' 
+                    [readonly]="true" [max]="5"
+                    >
+                  </ngb-rating>
                 <div *ngIf="isVisible">
                     <mat-form-field >
                         <input matInput [(ngModel)]='movie.title' placeholder='Title'/>

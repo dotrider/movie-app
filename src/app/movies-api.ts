@@ -5,7 +5,7 @@ export const MOVIES: Movie[] = [
       {
         id:2, 
         title: 'The Dark Knight', 
-        description: 'goes here', 
+        description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.", 
         averageRating: 5, 
         myRating: 5, 
         comments: 'Best movie Ever!',
@@ -14,7 +14,7 @@ export const MOVIES: Movie[] = [
       {
         id:3, 
         title: 'Iron Man', 
-        description: 'goes here', 
+        description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.", 
         averageRating: 2, 
         myRating: 2, 
         comments: 'Best movie Ever!',
@@ -23,7 +23,7 @@ export const MOVIES: Movie[] = [
       {
         id:4, 
         title: 'Avengers: Endgame', 
-        description: 'goes here', 
+        description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.", 
         averageRating: 2, 
         myRating: 2, 
         comments: 'Best movie Ever!',
@@ -32,7 +32,7 @@ export const MOVIES: Movie[] = [
       {
         id:5, 
         title: 'Black Panther', 
-        description: 'goes here', 
+        description: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.", 
         averageRating: 1, 
         myRating: 1, 
         comments: 'Best movie Ever!' ,
@@ -41,7 +41,7 @@ export const MOVIES: Movie[] = [
       {
         id:6, 
         title: 'The Irishman', 
-        description: 'goes here', 
+        description: 'An old man recalls his time painting houses for his friend, Jimmy Hoffa, through the 1950-70s.', 
         averageRating: 3, 
         myRating: 3, 
         comments: 'Best movie Ever!',
@@ -50,7 +50,7 @@ export const MOVIES: Movie[] = [
       {
         id:7, 
         title: 'Logan', 
-        description: 'goes here', 
+        description: "In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.", 
         averageRating: 4, 
         myRating: 4, 
         comments: 'Best movie Ever!' ,
@@ -59,7 +59,7 @@ export const MOVIES: Movie[] = [
       {
         id:8, 
         title: 'The Pursuit of Happyness', 
-        description: 'goes here', 
+        description: "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.", 
         averageRating: 5, 
         myRating: 5, 
         comments: 'Best movie Ever!',
@@ -68,7 +68,7 @@ export const MOVIES: Movie[] = [
       {
         id:9, 
         title: 'The Incredibles 2', 
-        description: 'goes here', 
+        description: "The Incredibles hero family takes on a new mission, which involves a change in family roles: Bob Parr (Mr Incredible) must manage the house while his wife Helen (Elastigirl) goes out to save the world.", 
         averageRating: 3, 
         myRating: 4, 
         comments: 'Best movie Ever!' ,
@@ -77,7 +77,7 @@ export const MOVIES: Movie[] = [
       {
         id:10, 
         title: 'Avatar', 
-        description: 'goes here', 
+        description: "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.", 
         averageRating: 4, 
         myRating: 5, 
         comments: 'Best movie Ever!' ,
