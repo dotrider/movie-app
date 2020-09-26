@@ -28,7 +28,7 @@ export class MoviesComponent implements OnInit {
   //same as componentDidMount
   ngOnInit(): void {
     this.getMovies();
-    console.log('ngM', this.movies)
+    // console.log('ngM', this.movies)
   }
 
   getMovies(){
@@ -56,12 +56,5 @@ export class MoviesComponent implements OnInit {
     // console.log('hitt')
      this.isVisible = !this.isVisible;
   }
-
-
-  //click event to select movie
-  // handleClick(movie: Movie){
-  //   this.selectedMovie = movie
-  //   console.log(this.selectedMovie, 'handleClick')
-  // }
 
 }

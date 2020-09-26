@@ -28,12 +28,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 
+//Bootstrap
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 //Search Bar
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 
 //Form Module
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -46,7 +50,8 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     MoviesComponent,
     DashboardComponent,
-    MovieInfoComponent
+    MovieInfoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -63,11 +68,16 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     NgMatSearchBarModule,
     MatIconModule,
-
+    NgbPaginationModule,
+    NgbAlertModule,
+    NgbModule,
+    
     //Helps mimic real server request
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
